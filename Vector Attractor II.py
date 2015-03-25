@@ -10,25 +10,21 @@ for i in range(0,10):
     b = random.randint (0,10)
     c = 0
 
-
-    VectorStart = (a,b,c)
-    VectorEnd = (60,60,60)
+    StartPoint = (a,b,c)
+    NewVecEnd = (40,40,40)
+    NewVecStart = (0,0,0)
+    origin = StartPoint
 
     r = random.randint(0,255)
     b = random.randint(0,255)
     g = random.randint(0,255)
     color = [r,g,b]
 
-    #vector = rs.VectorCreate(Vector1, Vector2)
-
-
-    vector = rs.VectorCreate(VectorEnd, VectorStart)
-    #vector = rs.VectorUnitize(vector)
-    #vector = rs.VectorScale(vector, 5)
-    line = rs.AddLine(VectorStart, vector)
+    vector = rs.VectorCreate(NewVecEnd, NewVecStart)
+    line = rs.AddLine(StartPoint, vector)
+    #line = rs.ScaleObject(line, origin, (0.5,0.5,0.5))
 
     rs.ObjectColor (line, color)
-
-
+    rs.DivideCurveLength(line,9)
 
 print (vector)
