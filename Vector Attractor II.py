@@ -4,6 +4,8 @@
 import rhinoscriptsyntax as rs
 import random
 
+point = rs.GetPoint()
+
 for i in range(0,10):
 
     a = random.randint (0,10)
@@ -11,7 +13,7 @@ for i in range(0,10):
     c = 0
 
     StartPoint = (a,b,c)
-    NewVecEnd = (40,40,40)
+    NewVecEnd = (point)
     NewVecStart = (0,0,0)
     origin = StartPoint
 
@@ -25,6 +27,7 @@ for i in range(0,10):
     #line = rs.ScaleObject(line, origin, (0.5,0.5,0.5))
 
     rs.ObjectColor (line, color)
-    rs.DivideCurveLength(line,9)
+    segments = rs.DivideCurveLength(line,9)
+    rs.AddLine(StartPoint, segments[1])
 
-print (vector)
+print (segments[0])
