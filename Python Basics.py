@@ -1,13 +1,5 @@
-#Dim arrStart, arrEnd
-#arrStart = Rhino.GetPoint("Start of line")
-#If IsArray(arrStart) Then
-#arrEnd = Rhino.GetPoint("End of line")
-#If IsArray(arrEnd) Then
-#Rhino.AddLine arrStart, arrEnd
-#End If
-#End If
-
-
+#WHAT IS RANDOM??
+#Example of how to randomize variables
 
 import rhinoscriptsyntax as rs
 import random
@@ -24,7 +16,7 @@ import random
 #print (random.randint (0,100))
 #print (random.random ())
 
-for i in range(0,10):
+#for i in range(0,10):
 
     #x = random.uniform(0,10)
     #y = random.uniform(0,10)
@@ -44,24 +36,47 @@ for i in range(0,10):
     #pt = rs.AddPoint(x,y,z)
     #rs.ObjectColor(pt, color)
 
+###
+    #a = random.randint(0,10)
+    #b = random.randint(0,10)
+    #c = random.randint(0,10)
 
-    a = random.randint(0,10)
-    b = random.randint(0,10)
-    c = random.randint(0,10)
+    #d = random.randint(0,10)
+    #e = random.randint(0,10)
+    #f = random.randint(0,10)
 
-    d = random.randint(0,10)
-    e = random.randint(0,10)
-    f = random.randint(0,10)
+    #start = [a,b,c]
+    #end = [d,e,f]
+
+
+    #r = random.randint(0,255)
+    #g = random.randint(0,255)
+    #b = random.randint(0,255)
+
+    #color = [r,g,b]
+
+    #line = rs.AddLine(start, end)
+    #rs.ObjectColor(line, color)
+
+
+for i in range(0,10):
+
+    a = random.randint (0,10)
+    b = random.randint (0,10)
+    c = 0
+
+    d = 12
+    e = 26
+    f = 20
 
     start = [a,b,c]
     end = [d,e,f]
 
-
     r = random.randint(0,255)
-    g = random.randint(0,255)
     b = random.randint(0,255)
+    g = random.randint(0,255)
 
     color = [r,g,b]
 
-    line = rs.AddLine(start, end)
-    rs.ObjectColor(line, color)
+    line = rs.AddLine (start, end)
+    rs.ObjectColor (line, color)
